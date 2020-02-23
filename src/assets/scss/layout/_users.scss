@@ -1,14 +1,21 @@
 .pane-container {
-    border-bottom: 1px solid $border;
-    border-right: 1px solid $border;
-    border-left: 1px solid $border;
+    border-bottom: 2px solid $border;
+    border-right: 2px solid $border;
+    border-left: 2px solid $border;
     height: calc(100% - 162px);
 }
 
 .min-v-content-container {
+    .nav-tabs {
+        border-bottom: 2px solid $border;
+        .nav-item {
+            margin-bottom: -2px;
+        }
+    }
     .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
         background-color: $primary;
         color: $white;
+        border: 2px solid $border;
     }
     ul li {
         color: $primary;
