@@ -60,3 +60,18 @@ ul {
     padding: 0 !important;
     padding-left: 0;
 }
+select {
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    font-weight: $font-weight-normal;
+    &::-ms-expand {
+        display: none;
+    }
+    &:disabled {
+		opacity: 0.5;
+		cursor: no-drop;
+	}
+}

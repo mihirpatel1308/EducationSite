@@ -1,0 +1,21 @@
+.form-select {
+    position: relative;
+    min-width: 200px;
+    & select {
+        padding: 8px 27px 8px 8px;
+        line-height: 24px;
+        border: 2px solid $secondary;
+        line-height: 20px;
+        color: $primary;
+    }
+
+    &:after {
+        vertical-align: middle;
+        font-size: 12px;
+        @include position(absolute, 12px, 11px, auto, auto);
+        pointer-events: none;
+        font: normal normal normal 14px/1 FontAwesome;
+        content: "\f078";
+        color: $primary;
+    }
+}

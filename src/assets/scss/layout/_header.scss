@@ -32,6 +32,7 @@
             border-right: 1px solid $white;
             color: $white;
             cursor: pointer;
+            display: block;
             @include media-breakpoint-down('md-1') {
                border-right: 0;
                width: 100%;
@@ -62,12 +63,3 @@
         text-align: left;
     }
 }
-// .navbar {
-//     position: relative;
-//     display: flex;
-//     flex-wrap: wrap;
-//     align-items: end;
-//     justify-content: flex-end;
-//     padding: 0.5rem 1rem;
-//     width: 100%;
-// }
