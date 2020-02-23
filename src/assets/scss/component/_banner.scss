@@ -18,11 +18,9 @@
 
 @media (min-width: 992px) {
     .slide .slide__img {
-        position: absolute;
-        top: 50%;
-        left: 0;
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
+        @include position(absolute, 50%, auto, auto, 0);
     }
 }
 
@@ -37,9 +35,10 @@
 }
 
 .slide .slide__content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    @include position(absolute, 50%, auto, auto, 50%);
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }

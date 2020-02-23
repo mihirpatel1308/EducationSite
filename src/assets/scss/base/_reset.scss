@@ -22,16 +22,41 @@ a {
     }
 }
 
-::-webkit-input-placeholder {
-    /* Edge */
-    color: red;
+/* clears the 'X' from Chrome */
+input[type="search"],
+input[type="text"] {
+    &::-webkit-search-decoration {
+        display: none;
+    }
+
+    &::-webkit-search-cancel-button {
+        display: none;
+    }
+
+    &::-webkit-search-results-button {
+        display: none;
+    }
+
+    &::-webkit-search-results-decoration {
+        display: none;
+    }
+
+    &::-ms-clear {
+        /* clears the 'X' from Internet Explorer */
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+    &::-ms-reveal {
+        display: none;
+        width: 0;
+        height: 0;
+    }
 }
 
-:-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
-    color: red;
-}
-
-::placeholder {
-    color: red;
+ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    padding-left: 0;
 }

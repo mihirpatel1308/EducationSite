@@ -1,0 +1,94 @@
+// main-left menu
+.toggle-sidebar {
+    display: none;
+
+    +.side-bar {
+        @include size(235px, 100%);
+        background-color: $primary;
+        border-right: 1px solid $primary;
+        white-space: nowrap;
+        font-weight: 600;
+        @include transition();
+        overflow: hidden;
+        & .sidebar-list {
+            & .sidebar-item {
+                padding: 10px 7px;
+                text-transform: capitalize;
+                cursor: pointer;
+                line-height: 12px;
+                //scss for active menu items
+                &.active-menu {
+                    color: $white;
+                    background-color: $secondary;
+                    & .fa {
+                        color: $white;
+                    }
+                }
+            }
+
+            & label {
+                width: 100%;
+            }
+        }
+
+        @include media-breakpoint-down('lg-mini') {
+            @include position(absolute, auto, auto, auto, -350px);
+            z-index: 1111;
+            margin-top: 75px;
+            height: calc(100% - 75px);
+        }
+
+        .main-logo-section {
+            height: 60px;
+            background-color: $white;
+            @include media-breakpoint-down('lg-mini') {
+                display: none !important;
+            }
+
+            .logo-img {
+                height: 60px;
+            }
+
+            .img-fluid {
+                width: auto;
+            }
+        }
+
+        .sidebar-item-label {
+            @extend %slide-show;
+            margin-left: 7px;
+            font-size: 16px;
+        }
+    }
+
+    // scss styles for toggling side-bar when it is checked
+    &:checked {
+        +.side-bar {
+            width: 70px;
+            & .sidebar-list {
+                & .sidebar-item {
+                    padding: 10px 15px;
+                }
+            }
+            @include media-breakpoint-down('lg-mini') {
+                @include position(absolute, auto, auto, auto, 0);
+                z-index: 1111;
+                margin-top: 75px;
+                width: 240px;
+            }
+
+            .sidebar-item-label {
+                transform: translateX(100px);
+                @extend %slide-hide;
+
+                @include media-breakpoint-down('lg-mini') {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+}
+
+
