@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'assets/scss/base/colors';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import 'assets/scss/base/index';
+@import 'assets/scss/component/index';
+@import 'assets/scss/layout/index';
+@import 'assets/scss/utilities/index'

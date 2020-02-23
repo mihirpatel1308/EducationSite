@@ -1,0 +1,55 @@
+/*
+    Author: Aayushi Patel
+    Desc: All loops used in Trigger declared here
+*/
+
+//for width classes
+@for $i from 1 through 100 {
+    .width-#{$i} {
+        width: percentage($i / 100);
+    }
+}
+
+//for height classes
+@for $i from 1 through 100 {
+    .height-#{$i} {
+        height: percentage($i / 100);
+    }
+}
+//for font weight
+@each $key, $value in $font-weight {
+    .#{$key} {
+        font-weight: $value;
+    }
+}
+//for cursors classes
+@each $key,
+$value in $cursor {
+    .#{$key} {
+        cursor: $value;
+    }
+}
+.head-text {
+    font-size: 40px;
+    @include media-breakpoint-down('sm-small') {
+        font-size: 20px;
+    }
+}
+.font-xl {
+    font-size: 25px;
+    @include media-breakpoint-down('sm-small') {
+        font-size: 15px;
+    }
+}
+.font-lg {
+    font-size: 20px;
+    @include media-breakpoint-down('sm-small') {
+        font-size: 14px;
+    }
+}
+.font-md {
+    font-size: 16px;
+    @include media-breakpoint-down('sm-small') {
+        font-size: 13px;
+    }
+}

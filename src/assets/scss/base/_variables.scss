@@ -1,0 +1,31 @@
+$font-weight-light: 400;
+$font-weight-normal: 500;
+$font-weight-bold: 600;
+$font-weight-bolder: 700;
+
+$font-weight-base: $font-weight-normal;
+$cursor: ("cursor-pointer": pointer,
+    "cursor-nodrop": no-drop,
+    "cursor-move": move,
+);
+$font-weight: ("font-light": 400,
+    "font-medium": 500,
+    "font-semibold": 600,
+    "font-bold": 700,
+);
+
+// //breakpoints for responsive design
+$grid-breakpoints: (
+    "xs": 0,
+    "xs-wide": 480px,
+    "sm": 576px,
+    "sm-small": 767px,
+    "md": 768px,
+    "md-1": 991px,
+    "lg": 992px,
+    "lg-landscape": 1023px,
+    "lg-mini": 1199px,
+    "xl": 1200px,
+    "xl-wide": 1599px,
+    "xxl": 1650px,
+);
