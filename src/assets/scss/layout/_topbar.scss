@@ -46,24 +46,13 @@
         font-weight: $font-weight-normal;
     }
 }
-
-// .border-bottom {
-//     border-bottom: 1px solid red !important;
-// }
-
-// .dropdown-toggle {
-//     &:after {
-//         vertical-align: middle;
-//         content: "\76";
-//         font-family: $icon-font-family;
-//         font-size: 12px;
-//         border-top: 0.3em $transparent;
-//         color: $primary-light-50;
-//     }
-// }
-
+.topbar-dropdown-container {
+    & .dropdown-menu {
+        top: 22px !important;
+    }
+}
 .dropdown-menu {
-    top: 24px !important;
+    top: 42px !important;
     & .dropdown-item {
         & a {
             font-size: 14px;
