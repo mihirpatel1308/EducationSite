@@ -9,19 +9,24 @@ jQuery(document).ready(function ($) {
 		$back_to_top = $('.cd-top');
 
 	//hide or show the "back to top" link
-	$(window).scroll(function () {
-		($(this).scrollTop() > offset) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
-		if ($(this).scrollTop() > offset_opacity) {
-			$back_to_top.addClass('cd-fade-out');
-		}
-	});
+	$(document).ready(function () {
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 50) {
+				$('#back-to-top').fadeIn();
+			} else {
+				$('#back-to-top').fadeOut();
+			}
+		});
+		// scroll body to 0px on click
+		$('#back-to-top').click(function () {
+			$('#back-to-top').tooltip('hide');
+			$('body,html').animate({
+				scrollTop: 0
+			}, 800);
+			return false;
+		});
 
-	//smooth scroll to top
-	$back_to_top.on('click', function (event) {
-		event.preventDefault();
-		$('body,html').animate({
-			scrollTop: 0,
-		}, scroll_top_duration
-		);
+		$('#back-to-top').tooltip('show');
+
 	});
 });

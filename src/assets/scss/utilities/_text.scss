@@ -34,6 +34,9 @@ $value in $cursor {
     @include media-breakpoint-down('sm-small') {
         font-size: 20px;
     }
+    @include media-breakpoint-down('md-1') {
+        font-size: 30px;
+    }
 }
 .font-xl {
     font-size: 25px;
@@ -46,10 +49,16 @@ $value in $cursor {
     @include media-breakpoint-down('sm-small') {
         font-size: 14px;
     }
+    @include media-breakpoint-down('md-1') {
+        font-size: 16px;
+    }
 }
 .font-md {
     font-size: 16px;
     @include media-breakpoint-down('sm-small') {
         font-size: 13px;
+    }
+    @include media-breakpoint-down('md-1') {
+        font-size: 15px;
     }
 }
